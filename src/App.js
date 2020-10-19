@@ -5,7 +5,7 @@ import "./App.css";
 import HomePage from "./pages/homepage/homepage.component";
 import ShopPage from "./pages/shop/shop.component";
 import Header from "./components/header/header.component";
-import AuthenticationPage from "./pages/authentication/authentication.component";
+import RegistrationPage from "./pages/registration/registration.component";
 import { auth, createUserProfileDocument } from "./firebase/firebase.utils";
 import { setCurrentUser } from "./redux/user/user.actions";
 
@@ -49,7 +49,7 @@ class App extends React.Component {
               this.props.currentUser ? (
                 <Redirect to="/" />
               ) : (
-                <AuthenticationPage />
+                <RegistrationPage />
               )
             }
           />
